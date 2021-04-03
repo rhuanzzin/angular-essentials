@@ -1,0 +1,11 @@
+<h4>{{ title }}<h4>
+<p class = font-italic> {{loadState}} </p>
+
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <button class="btn btn-outline-primary" type="button" (click)="Concluir()">Concluir</button>
+    <button class="btn btn-outline-primary" type="button" (click)="Resetar()">Resetar</button>
+  </div>
+  <input type="text" class="form-control" [(ngModel)]="loadState">
+</div>

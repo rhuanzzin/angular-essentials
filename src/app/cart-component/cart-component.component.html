@@ -1,0 +1,21 @@
+<h4>Seu Carrinho</h4>
+
+<button (click)= onButtonClick() class="btn" [ngClass]="{'btn-primary': novoItem !== '', 'bnt-default' : novoItem === ''}">Add Item</button>
+
+<input type="text" [(ngModel)]="novoItem">
+
+<hr>
+
+<!-- <p [ngClass]="{'visible': novoItem !== '', 'invisible': novoItem === ''}"> você adicionará 1 {{novoItem}} a sua lista</p> -->
+<p *ngIf="novoItem !== ''"> você adicionará 1 {{novoItem}} a sua lista</p>
+
+ng
+
+<ul class="list-group">
+  <li
+  class="list-group-item"
+  *ngFor="let items of items; let i = index"
+  [ngStyle]="{backgroundColor: i % 2 === 0 ? 'ghostwhite' : 'white'}">{{ items }}</li>
+</ul>
+
+
